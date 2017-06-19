@@ -18,7 +18,8 @@ public class UsuarioDao extends ConexaoDb implements AcoesBasicas<Usuario> {
 			stm.setString(1, usuario.getId());
 			stm.setString(2, usuario.getNome());
 			stm.setString(3, usuario.getSenha());
-			stm.setString(4, usuario.getTelefone());			
+			stm.setString(4, usuario.getTelefone());
+			stm.setString(5, usuario.getTipoDeAcesso().name());
 		} catch (SQLException e) {
 			System.err.println("Erro ao criar o Usuario!! " + e.getMessage());
 		}finally {

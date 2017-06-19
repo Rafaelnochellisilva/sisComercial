@@ -11,11 +11,12 @@ public class Usuario {
 	public Usuario() {
 		this.id = UUID.randomUUID().toString();
 	}
-	public Usuario(String nome, String senha, String telefone) {
-		this();		
+	public Usuario(String nome, String senha, String telefone, TipoDeAcesso tipoDeAcesso) {
+		super();
 		this.nome = nome;
 		this.senha = senha;
 		this.telefone = telefone;
+		this.tipoDeAcesso = tipoDeAcesso;
 	}
 	public String getId() {
 		return id;
@@ -41,6 +42,13 @@ public class Usuario {
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
+	public TipoDeAcesso getTipoDeAcesso() {
+		return tipoDeAcesso;
+	}
+	public void setTipoDeAcesso(TipoDeAcesso tipoDeAcesso) {
+		this.tipoDeAcesso = tipoDeAcesso;
+	}
+	
 	
 	
 	
