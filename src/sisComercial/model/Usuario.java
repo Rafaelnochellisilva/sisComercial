@@ -12,7 +12,7 @@ public class Usuario {
 		this.id = UUID.randomUUID().toString();
 	}
 	public Usuario(String nome, String senha, String telefone, TipoDeAcesso tipoDeAcesso) {
-		super();
+		this();
 		this.nome = nome;
 		this.senha = senha;
 		this.telefone = telefone;
