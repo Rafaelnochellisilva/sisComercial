@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="sisComercial.controller.CaixaMesaController">
+   <children>
+      <SplitPane dividerPositions="0.26421404682274247" layoutX="54.0" layoutY="65.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="tableViewmesa" layoutX="29.0" layoutY="20.0" prefHeight="398.0" prefWidth="258.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="tableColunmQtdLugar" prefWidth="75.0" text="Lugares" />
+                      <TableColumn fx:id="tableColunmNumeroMesa" text="Nº Mesa" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <VBox layoutX="6.0" layoutY="92.0" prefHeight="200.0" prefWidth="328.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <TableView prefHeight="235.0" prefWidth="437.0">
+                          <columns>
+                            <TableColumn fx:id="idDiscriminacao" prefWidth="220.0" text="Discriminação" />
+                            <TableColumn fx:id="idQuantidade" prefWidth="104.0" text="Quantidade" />
+                              <TableColumn fx:id="idPreco" prefWidth="112.0" text="Preço" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

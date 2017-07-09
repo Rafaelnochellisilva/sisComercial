@@ -8,11 +8,11 @@ import javafx.stage.Stage;
 import sisComercial.util.EspecificacoesSoftware;
 import sisComercial.util.Local;
 
-public class MainController extends Application{
+public class MainController /*extends Application*/{
 
-	@Override
+	/*@Override
 	public void start(Stage stage) throws Exception {
-		  Parent root = FXMLLoader.load(getClass().getResource(Local.loginPath));
+		  Parent root = FXMLLoader.load(getClass().getResource(Local.CaixaPath));
 	        Scene scene = new Scene(root);
 	        stage.setScene(scene);
 	        stage.setResizable(false);
@@ -23,6 +23,6 @@ public class MainController extends Application{
 	}
 	public static void main(String[] args) {
 		launch(args);
-	}
+	}*/
 
 }

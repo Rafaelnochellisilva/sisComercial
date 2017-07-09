@@ -1,9 +1,11 @@
 package sisComercial.dao;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import sisComercial.model.CarteiraTrabalho;
+import sisComercial.model.Categoria;
 import sisComercial.util.AcoesBasicas;
 import sisComercial.util.ConexaoDb;
 
@@ -38,5 +40,6 @@ public class CarteiraTrabalhoDao extends ConexaoDb implements AcoesBasicas<Carte
 		// TODO Auto-generated method stub
 		
 	}
+	  
 	
 }

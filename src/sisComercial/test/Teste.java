@@ -1,28 +1,13 @@
 package sisComercial.test;
 
-import java.util.Calendar;
+import java.util.List;
 
-import sisComercial.dao.CarteiraTrabalhoDao;
-import sisComercial.dao.CidadeDao;
-import sisComercial.dao.CpfDao;
-import sisComercial.dao.EnderecoDao;
-import sisComercial.dao.EstadoDao;
-import sisComercial.dao.FuncionarioDao;
-import sisComercial.dao.RgDao;
-import sisComercial.dao.UsuarioDao;
-import sisComercial.model.CarteiraTrabalho;
-import sisComercial.model.Cidade;
-import sisComercial.model.Cpf;
-import sisComercial.model.Endereco;
-import sisComercial.model.Estado;
-import sisComercial.model.Funcionario;
-import sisComercial.model.Rg;
-import sisComercial.model.TipoDeAcesso;
-import sisComercial.model.Usuario;
+import sisComercial.dao.MesaDao;
+import sisComercial.model.Mesa;
 
 public class Teste {
 	public static void main(String[] args) {
-		Usuario usuario =new Usuario("Rafael", "rafa1983", "(44)3023-7710",TipoDeAcesso.ADMINISTRADOR);
+		/*Usuario usuario =new Usuario("Rafael", "rafa1983", "(44)3023-7710",TipoDeAcesso.ADMINISTRADOR);
 		UsuarioDao usuarioDao = new UsuarioDao();
 		usuarioDao.salvar(usuario);
 		
@@ -57,6 +42,26 @@ public class Teste {
 		
 		Funcionario funcionario = new Funcionario("Rafael Nochelli da Silva", 1222.6, 322.7, 45.6, 1499.9, 1233.9, 433.7, 1988.7, usuario, cpf, rg, carteiraTrabalho, endereco, Calendar.getInstance());
 		FuncionarioDao funcionarioDao = new FuncionarioDao();
-		funcionarioDao.salvar(funcionario);
+		funcionarioDao.salvar(funcionario);*/
+		
+		/*Categoria categoria = new Categoria("Bebida","ativa");
+		CategoriaDao categoriaDao = new CategoriaDao();		
+		categoriaDao.salvar(categoria);
+		//System.out.println(categoriaDao.verificaCategoria("Comida"));
+		
+		/*Cardapio cardapio = new Cardapio("Garaná Antartica 2 litros",123.5,"ativo",categoria);
+		CardapioDao cardapioDao =new CardapioDao();
+		cardapioDao.salvar(cardapio);*/
+		//Server server =new Server();
+		Mesa mesa = new Mesa(4, true, "ocupada", "4");
+		MesaDao mesaDao = new MesaDao();
+		/*mesaDao.salvar(mesa);*/
+		List<Mesa> mesas = mesaDao.listarMesas();
+		
+		for (Mesa mesa2 : mesas) {
+			if(mesa2.getStatus().equals("ocupada"))
+			System.out.println(mesa2.getNumero());
+		}
+		
 	}
 }
