@@ -61,6 +61,12 @@ public class Cardapio {
 		this.categoria = categoria;
 	}
 
+	@Override
+	public String toString() {
+		return "Cardapio [id=" + id + ", descricao=" + descricao + ", preco=" + preco + ", status=" + status
+				+ ", categoria=" + categoria + "]";
+	}
+
 	
 	
 

@@ -1,21 +1,23 @@
 package sisComercial.model;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 public class ItemCardapio {
-	private String id;
-	private double preco;
+	private String id;	
 	private int quantidade;
 	private Cardapio cardapio;
 	private Pedido pedido;
+	private BigDecimal preco;
+	private String descricao;
+	
 
 	public ItemCardapio() {
 		this.id = UUID.randomUUID().toString();
 	}
 
-	public ItemCardapio(double preco, int quantidade, Cardapio cardapio, Pedido pedido) {
-		this();
-		this.preco = preco;
+	public ItemCardapio(int quantidade, Cardapio cardapio, Pedido pedido) {
+		this();	
 		this.quantidade = quantidade;
 		this.cardapio = cardapio;
 		this.pedido = pedido;
@@ -25,16 +27,24 @@ public class ItemCardapio {
 		return id;
 	}
 
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public double getPreco() {
+	public BigDecimal getPreco() {
 		return preco;
 	}
 
-	public void setPreco(double preco) {
+	public void setPreco(BigDecimal preco) {
 		this.preco = preco;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public int getQuantidade() {
@@ -61,4 +71,11 @@ public class ItemCardapio {
 		this.pedido = pedido;
 	}
 
+	@Override
+	public String toString() {
+		return "ItemCardapio [id=" + id + ", quantidade=" + quantidade + ", cardapio=" + cardapio + ", pedido=" + pedido
+				+ ", preco=" + preco + ", descricao=" + descricao + "]";
+	}
+
+	
 }

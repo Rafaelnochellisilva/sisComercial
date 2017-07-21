@@ -15,13 +15,13 @@ public class Pedido {
 		this.id = UUID.randomUUID().toString();
 	}
 
-	public Pedido(Calendar dataPedido, String status, double total, Mesa mesa,long numero) {
+	public Pedido(Calendar dataPedido, String status, double total, Mesa mesa) {
 		this();
 		this.dataPedido = Calendar.getInstance();
 		this.status = status;
 		this.total = total;
 		this.mesa = mesa;
-		this.numero = numero;
+		
 	}
 
 	public String getId() {
@@ -71,8 +71,14 @@ public class Pedido {
 	public void setNumero(long numero) {
 		this.numero = numero;
 	}
+
+	@Override
+	public String toString() {
+		return "Pedido [id=" + id + ", dataPedido=" + dataPedido + ", status=" + status + ", total=" + total + ", mesa="
+				+ mesa + ", numero=" + numero + "]";
+	}
 	
-	
+
 	
 	
 }

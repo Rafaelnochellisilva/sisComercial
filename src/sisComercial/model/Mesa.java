@@ -5,7 +5,7 @@ import java.util.UUID;
 public class Mesa {
 	private String id;
 	private int capacidade;
-	private boolean reserva;
+	private boolean reserva;	
 	private String status;
 	private String numero;
 	
@@ -61,6 +61,24 @@ public class Mesa {
 	public void setNumero(String numero) {
 		this.numero = numero;
 	}
+
+	@Override
+	public String toString() {
+		return "Mesa [id=" + id + ", capacidade=" + capacidade + ", reserva=" + reserva + ", status=" + status
+				+ ", numero=" + numero + "]";
+	}
 	
-	
+
 }
+	
+	
+	
+
+	
+
+	
+	
+	
+	
+	
+

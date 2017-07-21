@@ -1,32 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.web.*?>
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane minHeight="750.0" minWidth="744.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sisComercial.controller.InicialController">
    <children>
-      <MenuBar prefHeight="28.0" prefWidth="744.0">
+      <MenuBar>
         <menus>
           <Menu mnemonicParsing="false" text="Cadastrar">
             <items>
-              <MenuItem mnemonicParsing="false" text="Usuário" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Operações">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Caixa" />
+              <MenuItem fx:id="menuItemCliente" mnemonicParsing="false" text="Cliente" />
+                  <MenuItem fx:id="menuItemCategoria" mnemonicParsing="false" text="Categoria" />
+                  <MenuItem fx:id="menuItemCardapio" mnemonicParsing="false" text="Cardapio" />
+                  <MenuItem fx:id="menuItemCadastroMesa" mnemonicParsing="false" onAction="#acessarCadastroMesa" text="Mesa" />
+                  
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Relatórios">
             <items>
-              <MenuItem mnemonicParsing="false" text="Vendas" />
+              <MenuItem mnemonicParsing="false" text="Delete" />
             </items>
           </Menu>
+            <Menu mnemonicParsing="false" text="Gráficos">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Operações">
+              <items>
+                <MenuItem fx:id="menuItemCaixa" mnemonicParsing="false" onAction="#acessarCaixa" text="Caixa" />
+              </items>
+            </Menu>
         </menus>
       </MenuBar>
+      <AnchorPane fx:id="anchorPanePrincipal" prefHeight="375.0" prefWidth="600.0" />
    </children>
-</AnchorPane>
+</VBox>

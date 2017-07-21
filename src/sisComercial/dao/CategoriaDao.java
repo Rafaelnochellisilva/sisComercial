@@ -16,7 +16,7 @@ public class CategoriaDao extends ConexaoDb implements AcoesBasicas<Categoria> {
 		try {
 			String sql = "INSERT INTO categoria(id_categoria,nome,status)VALUES(?,?,?)";
 			PreparedStatement stm = conn.prepareStatement(sql);	
-			if(categoria.getNomeCategoria().equals(false)){
+			if(!verificaCategoria(categoria.getNomeCategoria())){
 				stm.setString(1, categoria.getId());
 				stm.setString(2, categoria.getNomeCategoria());
 				stm.setString(3, categoria.getStatus());
@@ -53,6 +53,32 @@ public class CategoriaDao extends ConexaoDb implements AcoesBasicas<Categoria> {
         }
         return false;
     } 
+
+	public Categoria buscaCategoria(String id) {
+		Categoria categoria = null;
+		open();
+		try {
+			String sql = "SELECT * FROM categoria WHERE id_categoria = ?";
+			ResultSet rs;
+			PreparedStatement stm = conn.prepareStatement(sql);
+			stm.setString(1, id);
+			rs = stm.executeQuery();
+			
+			while (rs.next()) {
+				String nome = rs.getString("nome");
+				String status = rs.getString("status");
+				categoria = new Categoria(nome, status);
+				categoria.setId(id);
+
+			}
+		} catch (SQLException e) {
+			System.err.println("Categoria Invalida!!" + e.getMessage());
+		} finally {
+			close();
+		}
+		return categoria;
+
+	}
 
 
 }
